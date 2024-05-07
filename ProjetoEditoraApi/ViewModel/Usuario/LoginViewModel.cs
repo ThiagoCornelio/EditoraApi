@@ -1,0 +1,15 @@
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace ProjetoEditoraApi.ViewModel.Usuario
+{
+    public class LoginViewModel
+    {
+        [Required(ErrorMessage = "Informe o E-mail")]
+        [EmailAddress(ErrorMessage = "E-mail inválido")]
+        public string Email { get; set; } = null!;
+        public string? Login{ get; set; }
+
+        [Required(ErrorMessage = "Informe a senha")]
+        public string Password { get; set; } = null!;
+    }
+}
